@@ -7,7 +7,7 @@ from django.contrib.auth.models import User
 
 
 def home(request):
-    return render(request, 'signup.html')
+    return render(request, 'signup.html', {'msg': False})
 
 
 def login_page(request):
@@ -18,15 +18,17 @@ def login_page(request):
 def signup(request):
     first_name = request.POST.get('firstname')
     email = request.POST.get('email')
+    if User.objects.get(email=email) is not None:
+        return render(request, 'signup.html', {'msg': 'username/email exists'})
     password = request.POST.get('password')
     confpass = request.POST.get('confpass')
     if confpass==password:
-        user = User.objects.create_user(username=email,email=email, password=password, first_name=first_name)
+        user = User.objects.create_user(username=email, email=email, password=password, first_name=first_name)
         login(request, user)
         print(user)
         return redirect('/dashboard')
     else:
-        return render(request, 'signup.html')
+        return render(request, 'signup.html', {'msg': 'error'})
 
 @require_POST
 def user_login(request):

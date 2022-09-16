@@ -9,6 +9,9 @@
 </head>
 
 <body>
+    {% if msg %}
+    {{msg}}
+    {% endif %}
     <form action="/auth/signup" method="post">
         {% csrf_token %}
         <label for='username'>Enter Your Name</label>
