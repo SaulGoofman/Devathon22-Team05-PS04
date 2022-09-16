@@ -5,10 +5,48 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>SignUp</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+<<<<<<< HEAD:src/signup.html
+    <div class="container">
+        <form action="#">
+            <div class="subcont">
+                <div class="left">
+                    <h1>Sign Up Here...</h1>
+                    <img src="nitwlogo.png" alt="">
+                </div>
+                <div class="form">
+                    <div class="data">
+                        <label for='username'>Name</label>
+                        <input type="text" id='username' class="inputs" required>
+                    </div>
+                    <div class="data">
+                        <label for='Mailid'>Mail Id</label>
+                        <input type="email" id="Mailid" class="inputs" required>
+                    </div>
+                    <div class="data">
+                        <label for='mobileNumber'>Mobile Number</label>
+                        <input type="text" id='mobileNumber' class="inputs" required>
+                    </div>
+                    <div class="data">
+                        <label for="password">New Password</label>
+                        <input type="password" name="password" id="password" class="inputs" required>
+                    </div>
+                    <div class="data">
+                        <label for="confpass">Confirm Password</label>
+                        <input type="password" name="confpass" id='confpass' class="inputs" required>
+                    </div>
+                    <div class="buts">
+                        <button type="submit">Sign up</button>
+                        <a href="#" class="exisuser">Existing User?</a>
+                    </div>
+                </div>
+            </div>
+    </div>
+=======
     {% if msg %}
     {{msg}}
     {% endif %}
@@ -26,7 +64,9 @@
         <input type="password" name="confpass" id='confpass'><br>
         <button type="submit">Signup</button><br>
         <a href="/auth/loginpage">Existing User?</a>
+>>>>>>> 533d725e666a135dd383b860982c0342f72a7afc:hallmanager/authapp/templates/signup.html
     </form>
+    </div>
 </body>
 
 </html>
