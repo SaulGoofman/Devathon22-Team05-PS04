@@ -16,7 +16,7 @@ def myaccount(request):
         params = {'name':request.user.first_name,'email':request.user.email,'phone': phone}
         return render(request, 'my-account.html', params)
     else:
-        redirect('/auth/login')
+        redirect('/auth/')
 
 
 def dashboard(request):
@@ -24,7 +24,7 @@ def dashboard(request):
         halls = SeminarHall.objects.all()
         return render(request, 'dashboard.html', {'halls': halls})
     else:
-        redirect('/auth/login')
+        return redirect('/auth/login')
 
 
 def hallbrief(request):

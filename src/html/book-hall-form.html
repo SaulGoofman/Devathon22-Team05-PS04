@@ -26,43 +26,29 @@
         <a class="nav-item nav-link" href="my-account.html">My Account</a>
     </nav>
     <div id="halls-container">
-        <h1>Available Seminar Halls</h1>
-        <div id="filter-options"></div>
-        <div id="halls-cards">
-            <div class="card">
-                <h5 class="card-header">Bose Hall</h5>
-                <div class="card-body">
-                    <img src="#" alt="bose hall img">
-                    <div class="card-info">
-                        <div class="capacity"><strong>Capacity:</strong><span class="cap-value"></span></div>
-                        <div class="location"><strong>Location:</strong><span class="loc-value"></span></div>
-                        <a href="#" class="btn btn-primary">See More Details</a>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <h5 class="card-header">Bose Hall</h5>
-                <div class="card-body">
-                    <img src="#" alt="bose hall img">
-                    <div class="card-info">
-                        <div class="capacity"><strong>Capacity:</strong><span class="cap-value"></span></div>
-                        <div class="location"><strong>Location:</strong><span class="loc-value"></span></div>
-                        <a href="#" class="btn btn-primary">See More Details</a>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <h5 class="card-header">Bose Hall</h5>
-                <div class="card-body">
-                    <img src="#" alt="bose hall img">
-                    <div class="card-info">
-                        <div class="capacity"><strong>Capacity:</strong><span class="cap-value"></span></div>
-                        <div class="location"><strong>Location:</strong><span class="loc-value"></span></div>
-                        <a href="#" class="btn btn-primary">See More Details</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <h1>Book Bose Hall</h1>
+        <form action="My Bookings" id="hall-request-form">
+            <label for="reason">Reason:
+                <input type="text" id="reason" name="reason">
+            </label>
+            <label for="date">Date:
+                <input type="date" id="date" name="date">
+            </label>
+            <label for="start-time">Start Time:
+                <input type="time" id="start-time" name="start-time">
+            </label>
+            
+            <label for="end-time">End Time:
+                <input type="time" id="end-time" name="end-time">
+            </label>
+            <label for="student-id">Student ID:
+                <input type="file" accept="image/*" id="student-id" name="student-id">
+            </label>
+            <label for="permission-letter">Permission Letter
+                <input type="file" accept=".pdf" id="permission-letter" name="perm-letter">
+            </label>
+            <a class="btn btn-primary">Submit Request</a>
+        </form>
     </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>

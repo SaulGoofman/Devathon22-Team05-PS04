@@ -34,3 +34,11 @@
     font-size: 20px;
     margin: 8px;
 }
+
+#hall-request-form {
+    display: flex;
+    flex-direction: column;
+    margin: 32px;
+    gap: 16px;
+    font-size: 30px;
+}
