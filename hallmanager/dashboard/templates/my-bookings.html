@@ -30,9 +30,11 @@
         <div id="filter-options"></div>
         <div id="halls-cards">
             <div class="card">
-
+                {% if reqs|length == 0 %}
+                <h1>You don't have any past requests</h1>
+                {% else %}
                 {% for obj in reqs %}
-                       <h5 class="card-header">{{obj.hall.name}}</h5>
+                <h5 class="card-header">{{obj.hall.name}}</h5>
                 <div class="card-body">
                     <img src="#" alt="bose hall img">
                     <div class="card-info">
@@ -44,7 +46,7 @@
                 </div>
             </div>
             {% endfor %}
-
+            {% endif %}
         </div>
     </div>
    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
