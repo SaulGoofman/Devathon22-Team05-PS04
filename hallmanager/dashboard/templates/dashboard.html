@@ -27,13 +27,13 @@
         <a class="nav-item nav-link" href="/dashboard/myaccount">My Account</a>
     </nav>
     <div id="halls-container">
-        <h2>Available Seminar Halls</h2>
+        <h1>Available Seminar Halls</h1>
         <div id="filter-options"></div>
         <div id="halls-cards">
 
             {% for hall in halls %}
             <div class="card">
-                <h5 class="card-header">Name : {{hall.name}}</h5>
+                <h5 class="card-header">{{hall.name}}</h5>
                 <div class="card-body">
                     <img src="#" alt="bose hall img">
                     <div class="card-info">
