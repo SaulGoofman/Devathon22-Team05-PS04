@@ -23,7 +23,7 @@ h2 {
 
 .subcont {
     width: 80rem;
-    height: 40rem;
+    height: 45rem;
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 20px;
     box-shadow: 3px 4px 5px 1.5px rgb(48, 48, 48);
@@ -70,6 +70,7 @@ img {
 
 
 label {
+    font-size: 1.5rem;
     margin: 5px 0;
     font-weight: 500;
 }
@@ -82,6 +83,7 @@ label {
 }
 
 .buts {
+    font-size: 1.5rem;
     margin: 1rem 3rem
 }
 
@@ -103,27 +105,48 @@ hr {
 .inputs {
     outline: none;
     border: 0px solid #000;
-    height: 20px;
+    height: 2rem;
     width: 250px;
     padding: 12px 10px;
     border-radius: 4px;
     box-shadow: 1px 1px 0px 0px #000;
-    font-size: 15px;
+    font-size: 1.5rem;
 }
 
 .buts {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     width: 255px;
+    width: 100%;
     height: 56.5px;
 }
 
 button {
+    font-size: 1.5rem;
     padding: 15px;
     border: none;
     border-radius: 30px;
-    width: 100px;
+    width: 150px;
     box-shadow: 3px 6px 15px 1.5px rgb(27, 27, 27);
+}
+
+.login {
+    display: flex;
+    width: 350px;
+}
+
+.login .buts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.login .buts a {
+    margin-top: 40px;
+    width: 300px;
 }
 
 .inputs:focus,
@@ -142,7 +165,7 @@ button:focus {
 }
 
 
-.exisuser {
+.exiuser {
     text-decoration: none;
     color: whitesmoke;
     margin-top: 20px;
@@ -152,16 +175,76 @@ h1 {
     font-size: 7rem;
 }
 
+
 div p {
     padding: 10px;
     background-color: rgba(0, 0, 0, 0.71);
     font-size: 1.4rem;
 }
 
-.radios {
-    margin: 10px;
+.role {
+    font-size: 1.53em;
+    margin-bottom: 0.31em;
 }
 
-.radios label:nth of type(1){
+.radios {
+    font-size: 1.3rem;
+    display: flex;
+    margin: 10px;
+    justify-content: space-around;
+    width: 350px;
+    flex-direction: column;
+}
+
+.div1 {
+    text-align: right;
+    display: flex;
+    width: 100%;
+}
+
+.div1 .status .label {
+    margin-right: 3.5rem;
+}
+
+.div2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.status {
+    margin-bottom: 10px;
+}
+
+
+@media screen and (max-width: 1400px) {
+    .subcont {
+        width: 80rem;
+        height: 40rem;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 20px;
+        box-shadow: 3px 4px 5px 1.5px rgb(48, 48, 48);
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        backdrop-filter: blur(5px);
+    }
+
+    .left {
+        color: #fff;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        flex-direction: column;
+        border-radius: 20px 0 0 20px;
+        background-image: url(../assets//henrik-donnestad-t2Sai-AqIpI-unsplash.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+
+
 
 }
