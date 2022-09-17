@@ -12,11 +12,12 @@
         rel="stylesheet">
     <title>SignUp</title>
     <link rel="stylesheet" href="../css/style.css">
+    <script src="../scripts/validate_form.js"></script>
 </head>
 
 <body>
     <div class="container">
-        <form action="#">
+        <form action="#" onsubmit="return validatePassword()">
             <div class="subcont">
                 <div class="left">
                     <h1>NITW</h1>
@@ -46,8 +47,14 @@
                         <label for="confpass">Confirm Password</label>
                         <input type="password" name="confpass" id='confpass' class="inputs" required>
                     </div>
+<<<<<<< HEAD
                     <div class="data">
                         <button type="submit" class="subbut">Sign up</button>
+=======
+                    <div class="buts">
+                        <button type="submit">Sign up</button>
+                        <a href="login.html" class="exisuser">Existing User?</a>
+>>>>>>> 94f037d91c96f59b2765731fc3b5e1ad09dcbbc8
                     </div>
                 </div>
             </div>
