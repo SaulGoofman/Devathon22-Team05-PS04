@@ -11,7 +11,8 @@
 
 <body>
     <div class="container">
-        <form action="#">
+        <form action="/auth/signup" method="post">
+            {% csrf_token %}
             <div class="subcont">
                 <div class="left">
                     <h1>Sign Up Here...</h1>
@@ -20,15 +21,15 @@
                 <div class="form">
                     <div class="data">
                         <label for='username'>Name</label>
-                        <input type="text" id='username' class="inputs" required>
+                        <input type="text" id='username' class="inputs" name="firstname" required>
                     </div>
                     <div class="data">
                         <label for='Mailid'>Mail Id</label>
-                        <input type="email" id="Mailid" class="inputs" required>
+                        <input type="email" id="Mailid" class="inputs" name="email" required>
                     </div>
                     <div class="data">
                         <label for='mobileNumber'>Mobile Number</label>
-                        <input type="text" id='mobileNumber' class="inputs" required>
+                        <input type="text" id='mobileNumber' class="inputs" name="phoneno" required>
                     </div>
                     <div class="data">
                         <label for="password">New Password</label>
@@ -40,11 +41,11 @@
                     </div>
                     <div class="buts">
                         <button type="submit">Sign up</button>
-                        <a href="#" class="exisuser">Existing User?</a>
+                        <a href="/auth/loginpage" class="exisuser">Existing User?</a>
                     </div>
                 </div>
             </div>
-    </div>
+
     </form>
     </div>
 </body>
