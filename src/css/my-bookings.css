@@ -1,4 +1,4 @@
-#bookings-container {
+#bookings-container, #halls-container {
     width: 45%;
     border: 1px solid black;
     display:flex;
@@ -30,7 +30,7 @@
 }
 
 .btn-primary {
-    padding: 8px;
-    font-size: 16px;
+    padding: 12px;
+    font-size: 20px;
     margin: 8px;
 }
