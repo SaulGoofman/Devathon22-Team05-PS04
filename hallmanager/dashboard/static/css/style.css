@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+h2 {
+    font-size: 3rem;
+    margin: 20px;
+}
+
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    background-color: whitesmoke;
+    display: flex;
+    align-items: center;
+    /* background-image: url(/static/assets/jonatan-moerman-4nUQH0EXzfg-unsplash.jpg); */
+    background-size: contain;
+    justify-content: center;
+}
+
+.subcont {
+    width: 80rem;
+    height: 40rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    box-shadow: 3px 4px 5px 1.5px rgb(48, 48, 48);
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    flex-wrap: wrap;
+    backdrop-filter: blur(5px);
+}
+
+.left {
+    /* width: 10%; */
+    color: #fff;
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px 0 0 20px;
+    background-image: url("/static/assets/henrik-donnestad-t2Sai-AqIpI-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+img {
+    margin: 40px;
+}
+
+.form {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    width: 40%;
+    height: 100%;
+    background-color: rgb(70, 130, 180);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 0 20px 20px 0;
+}
+
+
+label {
+    margin: 5px 0;
+    font-weight: 500;
+}
+
+.data {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    margin: 1rem 6rem;
+}
+
+.buts {
+    margin: 1rem 3rem
+}
+
+.data:nth-of-type(1) {
+    margin-top: 2rem;
+}
+
+/* .data:nth-of-type(6) {
+    margin-bottom: 1rem;
+}
+
+.data:nth-of-type(7) {
+    margin-bottom: 2rem;
+} */
+hr {
+    width: 400px;
+}
+
+.inputs {
+    outline: none;
+    border: 0px solid #000;
+    height: 20px;
+    width: 250px;
+    padding: 12px 10px;
+    border-radius: 4px;
+    box-shadow: 1px 1px 0px 0px #000;
+    font-size: 15px;
+}
+
+.buts {
+    display: flex;
+    justify-content: space-between;
+    width: 255px;
+    height: 56.5px;
+}
+
+button {
+    padding: 15px;
+    border: none;
+    border-radius: 30px;
+    width: 100px;
+    box-shadow: 3px 6px 15px 1.5px rgb(27, 27, 27);
+}
+
+.inputs:focus,
+.inputs:valid {
+    /* font-size: 1rem; */
+    width: 270px;
+    box-shadow: 1px 4px 15px 1.5px rgba(27, 27, 27, 0.7);
+    border: none;
+    transform: translateY(2px);
+}
+
+button:focus {
+    border: none;
+    transform: translateY(2px);
+    box-shadow: 1px 1px 0px 0px #000;
+}
+
+
+.exisuser {
+    text-decoration: none;
+    color: whitesmoke;
+    margin-top: 20px;
+}
+
+h1 {
+    font-size: 7rem;
+}
+
+div p {
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.71);
+    font-size: 1.4rem;
+}
+
+.radios {
+    margin: 10px;
+}
+
+.radios label:nth of type(1){
+
+}

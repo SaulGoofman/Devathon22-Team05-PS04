@@ -1,0 +1,28 @@
+#account-container {
+    width: 45%;
+    border: 1px solid black;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px 10px lightgrey;
+    padding:24px;
+}
+
+strong {
+    font-size: 30px;
+}
+
+.info {
+    margin: 12px;
+}
+span {
+    font-size: 24px;
+}
+
+.btn-primary {
+    padding: 16px;
+    font-size: 20px;
+    margin: 16px;
+}

@@ -2,7 +2,7 @@ from django.shortcuts import render, HttpResponse, redirect
 from django.views.decorators.http import require_POST
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
-
+from authapp.models import Nuser
 # Create your views here.
 
 
@@ -18,12 +18,16 @@ def login_page(request):
 def signup(request):
     first_name = request.POST.get('firstname')
     email = request.POST.get('email')
-    if User.objects.get(email=email) is not None:
-        return render(request, 'signup.html', {'msg': 'username/email exists'})
+
+    if len(User.objects.filter(email=email)) !=0:
+        return render(request, 'signup.html', {'msg': 'Username/email exists'})
+
     password = request.POST.get('password')
     confpass = request.POST.get('confpass')
     if confpass==password:
         user = User.objects.create_user(username=email, email=email, password=password, first_name=first_name)
+        Nuser.objects.create(user=user, phone=request.POST.get('phoneno'), blocked=False)
+        # user.nuser.phone = request.POST.get('phoneno')
         login(request, user)
         print(user)
         return redirect('/dashboard')

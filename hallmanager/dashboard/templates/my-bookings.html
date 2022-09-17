@@ -1,4 +1,5 @@
 <!doctype html>
+{% load static %}
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -9,7 +10,7 @@
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/common-style.css">
+    <link rel="stylesheet" href="{% static 'css/common-style.css' %}">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -19,28 +20,30 @@
   </head>
   <body>
     <!--nav bar-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="nav-item nav-link active" href="dashboard.html">Dashboard</a>
-        <a class="nav-item nav-link active" href="#">Previous Bookings<span class="sr-only">(current)</span></a>
-        <a class="nav-item nav-link" href="#">My Account</a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar">
+        <a class="nav-item nav-link active" href="/dashboard">Dashboard</a>
+        <a class="nav-item nav-link active" href="/dashboard/mybookings">My Bookings<span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link" href="/dashboard/myaccount">My Account</a>
       </nav>
       <div>
         <h2>My Bookings</h2>
         <div id="filter-options"></div>
         <div id="halls-cards">
-
             <div class="card">
-                <h5 class="card-header">Bose Hall</h5>
+
+                {% for obj in reqs %}
+                       <h5 class="card-header">{{obj.hall.name}}</h5>
                 <div class="card-body">
                     <img src="#" alt="bose hall img">
                     <div class="card-info">
-                        <div class="Date"><strong>Date:</strong><span class="cap-value"></span></div>
+                        <div class="Date"><strong>Date: {{obj.startTime}}</strong><span class="cap-value"></span></div>
                         <div class="time"><strong>Time:</strong><span class="loc-value"></span></div>
                         <a href="#" class="btn btn-primary">See More Details</a>
                         <a href="#" class="btn btn-primary">Cancel</a>
                     </div>
                 </div>
             </div>
+            {% endfor %}
 
         </div>
     </div>
