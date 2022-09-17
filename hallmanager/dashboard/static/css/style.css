@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    background-color: darkred;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.subcont {
+    width: 80rem;
+    height: 40rem;
+    background-color: aquamarine;
+    border-radius: 20px;
+    box-shadow: 3px 4px 5px 0.5px #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    flex-wrap: wrap;
+}
+
+.left {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form {
+    display: flex;
+    width: 40%;
+    height: 100%;
+    /* background-color: #fff; */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+label {
+    margin: 5px 0;
+}
+
+.data {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    margin: 1rem 6rem;
+}
+
+.data:nth-of-type(1) {
+    margin-top: 2rem;
+}
+
+/* .data:nth-of-type(6) {
+    margin-bottom: 1rem;
+}
+
+.data:nth-of-type(7) {
+    margin-bottom: 2rem;
+} */
+
+.inputs {
+    outline: none;
+    border: 2px solid #000;
+    box-shadow: 3px 4px 5px 0.5px #000;
+    height: 20px;
+    width: 250px;
+    padding: 12px 10px;
+    border-radius: 4px;
+    font-size: 15px;
+}
+
+.buts {
+    display: flex;
+    justify-content: space-between;
+    width: 255px;
+    height: 56.5px;
+}
+
+button {
+    padding: 15px;
+    border-radius: 30px;
+    width: 100px;
+    box-shadow: 3px 4px 5px 0.5px #000;
+}
+
+.inputs:focus,
+.inputs:valid,
+button:focus {
+    transform: translateY(2px);
+    box-shadow: 1px 2px 0px 0px #000;
+}
+
+/* input {
+    margin-bottom: 25px;
+    height: 20px;
+    width: 100%;
+border: none;
+border-bottom: solid black 1px;
+background: none;
+} */
+
+/* .inputs:focus,
+.inputs:hover {
+    outline: none;
+    border-bottom: solid grey 1px;
+}
+
+
+.container .form .data label {
+    display: inline-block;
+    position: relative;
+    top: -50px;
+    transition: 0.3s ease-out;
+}
+
+.inputs:valid+label {
+    color: aqua;
+}
+
+.inputs:focus+label,
+.inputs:valid+label {
+    transform: translateY(-150%);
+}
+
+.form {
+    width: 900px;
+    height: 500px;
+    background: #fff;
+    border-radius: 40px;
+}
+
+.blur {
+    filter: blur(10px);
+} */

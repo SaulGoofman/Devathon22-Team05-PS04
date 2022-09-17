@@ -1,0 +1,36 @@
+#bookings-container, #halls-container {
+    width: 45%;
+    border: 1px solid black;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px 10px lightgrey;
+}
+
+#halls-cards {
+    display: flex;
+    flex-direction: column;
+}
+
+.card {
+    width: 650px;
+    border: 1px solid black;
+    padding: 16px;
+    font-size: 25px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px 10px lightgrey;
+    margin: 48px;
+}
+
+.card-body {
+    display: flex;
+    justify-content: space-around;
+}
+
+.btn-primary {
+    padding: 12px;
+    font-size: 20px;
+    margin: 8px;
+}
