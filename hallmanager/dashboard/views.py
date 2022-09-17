@@ -1,7 +1,8 @@
 from django.shortcuts import render, HttpResponse, redirect, get_object_or_404
-from .models import SeminarHall
+from .models import SeminarHall, Request
 from authapp.models import Nuser
 from .forms import RequestForm
+
 # from django.
 
 # Create your views here.
@@ -34,6 +35,22 @@ def hallbrief(request):
 
 
 def requestForm(request):
-    # if request.Method == 'POST':
-
+    if request.method == 'POST':
+        f = RequestForm(request.POST)
+        if f.is_valid():
+            newreq = f.save()
+            newreq.user = request.user
+            newreq.hall = SeminarHall.objects.get(name = request.POST.get('hall'))
+            newreq.save()
+            return redirect('/dashboard')
+        else:
+            print('form is invalid')
     return render(request, 'requestform.html', {'form': RequestForm(), 'hall': request.GET.get('hall')})
+
+
+def mybooking(request):
+    if request.user.is_authenticated:
+        hallrequests = Request.objects.filter(user = request.user)
+        return render(request, 'my-bookings.html', {'reqs': hallrequests})
+    else:
+        redirect('/auth')

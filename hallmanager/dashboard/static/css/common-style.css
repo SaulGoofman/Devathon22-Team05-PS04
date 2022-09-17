@@ -20,12 +20,38 @@
 }
 
 .btn-primary {
-    background-color: goldenrod !important;
+    background-color:darkcyan  !important;
     border: 1px solid transparent !important;
 }
 
 .btn-primary:hover {
     background-color: white !important;
-    color:goldenrod;
-    border: 1px solid goldenrod !important;
+    color:darkcyan;
+    border: 1px solid darkcyan !important;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 150px;
+}
+
+#navbar {
+    width: 100%;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: bolder;
+}
+
+h5 {
+    font-size: 36px;
+    font-weight: bolder;
+}
+
+#footer {
+    display: fle;
 }

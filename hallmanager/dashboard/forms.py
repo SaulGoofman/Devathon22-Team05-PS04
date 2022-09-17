@@ -7,6 +7,6 @@ class RequestForm(forms.ModelForm):
         model = Request
         fields = ['startTime','endTime','reason','poster','permLetter']
         widgets = {
-            'startTime': forms.DateInput(attrs={'type': 'date'}),
-            'endTime': forms.DateInput(attrs={'type': 'date'}),
+            'startTime': forms.DateTimeInput(format='%d/%m/%Y %H:%M', attrs={'type': 'datetime-local'}),
+            'endTime': forms.DateTimeInput(attrs={'type': 'datetime-local'}),
         }

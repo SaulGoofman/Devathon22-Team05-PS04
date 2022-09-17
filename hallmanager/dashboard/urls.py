@@ -5,5 +5,6 @@ urlpatterns = [
     path('', views.dashboard, name='dashboard'),
     path('myaccount', views.myaccount, name='myaccount'),
     path('hall', views.hallbrief, name='hallbrief'),
-    path('requesthall', views.requestForm, name='requestform')
+    path('requesthall', views.requestForm, name='requestform'),
+    path('mybookings', views.mybooking, name='mybooking')
 ]
