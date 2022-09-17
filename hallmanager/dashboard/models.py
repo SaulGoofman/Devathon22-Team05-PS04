@@ -27,8 +27,8 @@ class Request(models.Model):
     startTime = models.DateTimeField()
     endTime = models.DateTimeField()
     reason = models.TextField()
-    poster = models.ImageField(upload_to='posters/')
-    permLetter = models.FileField(upload_to='permissionLetters/')
+    poster = models.ImageField(upload_to='posters/', blank=True)
+    permLetter = models.FileField(upload_to='permissionLetters/', blank=True)
     status = models.CharField(max_length=50, default='pending')
 
     def __str__(self):

@@ -30,7 +30,7 @@
     <form action = "/dashboard/requesthall" method = "post">
         {% csrf_token %}
         {{hall}}
-        <input type="hidden" value="{{hall.name}}" name="hall">
+        <input type="hidden" value="{{hall}}" name="hall">
         {{form.as_p}}
         <input type="submit" value=Submit>
     </form>

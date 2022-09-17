@@ -36,12 +36,17 @@ def hallbrief(request):
 
 def requestForm(request):
     if request.method == 'POST':
-        f = RequestForm(request.POST)
+        f = RequestForm(request.POST, request.FILES)
         if f.is_valid():
-            newreq = f.save()
-            newreq.user = request.user
-            newreq.hall = SeminarHall.objects.get(name = request.POST.get('hall'))
+            print(request.POST.get('hall'))
+            hall = SeminarHall.objects.get(name=request.POST.get('hall'))
+            print(f.fields['startTime'])
+            newreq = Request(user=request.user, hall=hall, startTime=str(f.fields['startTime']), endTime=str(f.fields['startTime']))
             newreq.save()
+            # newreq = f.save()
+            # newreq.user = request.user
+            # newreq.hall = SeminarHall.objects.get(name = request.POST.get('hall'))
+            # newreq.save()
             return redirect('/dashboard')
         else:
             print('form is invalid')
