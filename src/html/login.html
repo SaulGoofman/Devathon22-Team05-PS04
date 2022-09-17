@@ -12,6 +12,7 @@
         href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 </head>
 
 <body>
@@ -24,23 +25,36 @@
                     <!-- <img src="../assets/nitwlogo.png" alt=""> -->
                 </div>
                 <div class="form">
-                    <h2>Log in</h2>
+                    <h2>Log In</h2>
                     <hr>
                     <div class="data">
-                        <label for="existemail">Enter Your Mail Id</label>
+                        <label for="existemail">Mail Id</label>
                         <input type="email" id='existemail' class="inputs" required>
                     </div>
                     <div class="data">
-                        <label for="password">Enter Your Mail Id</label>
+                        <label for="password">Password</label>
                         <input type="password" id='password' class="inputs" required>
                     </div>
-                    <div class="radios">Role:
-                        <label for="student">Student</label>
-                        <input type="radio" name="role" id='student' value="student">
-                        <label for="admin">Admin</label>
-                        <input type="radio" name="role" id='admin' value="admin">
+                    <div class="radios">
+                        <div class="role">Role:</div>
+                        <div class="div1">
+                            <div class="status">
+                                <label for="student">Student &nbsp<i class="fa-solid fa-user-graduate"></i></label>
+                                <input type="radio" name="role" id='student' value="student">
+                            </div>
+                            &nbsp &nbsp &nbsp &nbsp &nbsp
+                            <div class="status">
+                                <label for="admin">Admin &nbsp<i class="fa-solid fa-user"></i></label>
+                                <input type="radio" name="role" id='admin' value="admin">
+                            </div>
+                        </div>
                     </div>
-                    <button type="submit">Login</button>
+                    <div class="login">
+                        <div class="buts">
+                            <button type="submit">Login</button>
+                            <a href="#" class="exiuser">Not a User..? Sign Up Here...</a>
+                        </div>
+                    </div>
         </form>
     </div>
 </body>
